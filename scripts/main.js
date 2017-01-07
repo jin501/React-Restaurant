@@ -1,18 +1,42 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
-
-/*
-  App
-*/
-
 class App extends React.Component {
 
   render(){
     return(
       <div className="catch-of-the-day">
-        
+        <div className="menu">
+          <Header />
+        </div>
+          <Order />
+          <Inventory />
       </div>
+    )
+  }
+}
+
+class Header extends React.Component {
+  render(){
+    return (
+      <p>Header</p>
+    )
+  }
+}
+
+class Order extends React.Component {
+
+  render(){
+    return (
+      <p>Order</p>
+    )
+  }
+}
+
+class Inventory extends React.Component {
+  render(){
+    return (
+      <p>Inventory</p>
     )
   }
 }
@@ -32,4 +56,4 @@ class StorePicker extends React.Component {
 }
 
 
-ReactDOM.render(<StorePicker />, document.querySelector('#main'));
+ReactDOM.render(<App />, document.querySelector('#main'));
